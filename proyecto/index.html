@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTVIACHA - Tenis y Productos Deportivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SPORTVIACHA</h1>
+        <p>Tenis Urbanos • Fútbol • Casuales • Productos Deportivos</p>
+    </header>
+
+    <div class="categories">
+        <button class="cat-btn active" onclick="filter('todos')">Todos</button>
+        <button class="cat-btn" onclick="filter('urbanos')">Tenis Urbanos</button>
+        <button class="cat-btn" onclick="filter('futbol')">Tenis de Fútbol</button>
+        <button class="cat-btn" onclick="filter('casuales')">Tenis Casuales</button>
+        <button class="cat-btn" onclick="filter('productos')">Productos de Deporte</button>
+    </div>
+
+    <div class="products" id="products">
+        <!-- TENIS URBANOS -->
+        <div class="product" data-cat="urbanos">
+            <div class="product-image"><img src="tenis-urbanos-1.jpg" alt="Tenis Urbanos Blanco y Negro"></div>
+            <div class="product-info">
+                <h3>Tenis Urbanos Blanco y Negro</h3>
+                <p>Zapatillas urbanas blancas con detalles y logotipo en negro.</p>
+                <div class="price">95 Bs</div>
+                <select id="size1"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Urbanos Blanco y Negro', 'size1')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="urbanos">
+            <div class="product-image"><img src="tenis-urbanos-2.jpg" alt="Tenis Urbanos Blanco y Café"></div>
+            <div class="product-info">
+                <h3>Tenis Urbanos Blanco y Café</h3>
+                <p>Zapatillas urbanas blancas con logotipo en tono café y detalles beige.</p>
+                <div class="price">95 Bs</div>
+                <select id="size2"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Urbanos Blanco y Café', 'size2')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="urbanos">
+            <div class="product-image"><img src="tenis-urbanos-3.jpg" alt="Tenis Urbanos Blancos"></div>
+            <div class="product-info">
+                <h3>Tenis Urbanos Blancos</h3>
+                <p>Zapatillas urbanas completamente blancas con logotipo plateado.</p>
+                <div class="price">95 Bs</div>
+                <select id="size3"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Urbanos Blancos', 'size3')">Agregar al pedido</button>
+            </div>
+        </div>
+
+        <!-- TENIS DE FÚTBOL -->
+        <div class="product" data-cat="futbol">
+            <div class="product-image"><img src="futbol-1.jpg" alt="Tenis de Fútbol Celeste"></div>
+            <div class="product-info">
+                <h3>Tenis de Fútbol Celeste</h3>
+                <p>Botines de fútbol color celeste con detalles en naranja y negro.</p>
+                <div class="price">80 Bs</div>
+                <select id="size4"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis de Fútbol Celeste', 'size4')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="futbol">
+            <div class="product-image"><img src="futbol-2.jpg" alt="Tenis de Fútbol Negro y Rojo"></div>
+            <div class="product-info">
+                <h3>Tenis de Fútbol Negro y Rojo</h3>
+                <p>Botines de fútbol negros con detalles en rojo y blanco.</p>
+                <div class="price">80 Bs</div>
+                <select id="size5"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis de Fútbol Negro y Rojo', 'size5')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="futbol">
+            <div class="product-image"><img src="futbol-3.jpg" alt="Tenis de Fútbol Negro y Dorado"></div>
+            <div class="product-info">
+                <h3>Tenis de Fútbol Negro y Dorado</h3>
+                <p>Botines de fútbol negros con detalles dorados.</p>
+                <div class="price">80 Bs</div>
+                <select id="size6"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis de Fútbol Negro y Dorado', 'size6')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="futbol">
+            <div class="product-image"><img src="futbol-4.jpg" alt="Tenis de Fútbol Verde Neón"></div>
+            <div class="product-info">
+                <h3>Tenis de Fútbol Verde Neón</h3>
+                <p>Botines de fútbol verde neón con detalles naranja.</p>
+                <div class="price">80 Bs</div>
+                <select id="size7"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis de Fútbol Verde Neón', 'size7')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="futbol">
+            <div class="product-image"><img src="futbol-5.jpg" alt="Tenis de Fútbol Azul"></div>
+            <div class="product-info">
+                <h3>Tenis de Fútbol Azul</h3>
+                <p>Botines de fútbol azules con detalles naranja.</p>
+                <div class="price">80 Bs</div>
+                <select id="size8"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis de Fútbol Azul', 'size8')">Agregar al pedido</button>
+            </div>
+        </div>
+
+        <!-- TENIS CASUALES -->
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-1.jpg" alt="Tenis Casual Blanco"></div>
+            <div class="product-info">
+                <h3>Tenis Casual Blanco</h3>
+                <p>Zapatillas casuales blancas, cómodas y de diseño sencillo.</p>
+                <div class="price">95 Bs</div>
+                <select id="size9"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Blanco', 'size9')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-2.jpg" alt="Tenis Casual Durazno"></div>
+            <div class="product-info">
+                <h3>Tenis Casual Durazno</h3>
+                <p>Zapatillas casuales color durazno, ligeras y cómodas.</p>
+                <div class="price">95 Bs</div>
+                <select id="size10"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Durazno', 'size10')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-3.jpg" alt="Tenis Casual Negro"></div>
+            <div class="product-info">
+                <h3>Tenis Casual Negro</h3>
+                <p>Zapatillas casuales negras con suela blanca.</p>
+                <div class="price">95 Bs</div>
+                <select id="size11"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Negro', 'size11')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-4.jpg" alt="Tenis Casual Negro"></div>
+            <div class="product-info">
+                <h3>Tenis Casual Negro</h3>
+                <p>Zapatillas casuales negras con detalles morados.</p>
+                <div class="price">80 Bs</div>
+                <select id="size12"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Negro', 'size12')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-5.jpg" alt="Tenis Casual Morado"></div>
+            <div class="product-info">
+                <h3>Tenis Casual fucsia</h3>
+                <p>Zapatillas casuales color fucsia, cómodas y modernas.</p>
+                <div class="price">80 Bs</div>
+                <select id="size13"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Morado', 'size13')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-6.jpg" alt="Tenis Casual Gris"></div>
+            <div class="product-info">
+                <h3>Tenis Casual Gris</h3>
+                <p>Zapatillas casuales grises con detalles rosados.</p>
+                <div class="price">80 Bs</div>
+                <select id="size14"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Gris', 'size14')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="casuales">
+            <div class="product-image"><img src="casual-7.jpg" alt="Tenis Casual Rosado"></div>
+            <div class="product-info">
+                <h3>Tenis Casual Rosado</h3>
+                <p>Zapatillas casuales rosadas, ligeras y cómodas.</p>
+                <div class="price">95 Bs</div>
+                <select id="size15"><option>Selecciona talla</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option></select>
+                <button class="buy-btn" onclick="addToOrder('Tenis Casual Rosado', 'size15')">Agregar al pedido</button>
+            </div>
+        </div>
+
+        <!-- PRODUCTOS DE DEPORTE -->
+        <div class="product" data-cat="productos">
+            <div class="product-image"><img src="producto-1.jpg" alt="Rodilleras Deportivas SITEX SPORT"></div>
+            <div class="product-info">
+                <h3>Rodilleras Deportivas SITEX SPORT</h3>
+                <p>Rodilleras deportivas azules con protección acolchada. Marca SITEX SPORT.</p>
+                <div class="price">55 Bs</div>
+                <button class="buy-btn" onclick="addToOrder('Rodilleras Deportivas SITEX SPORT', '')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="productos">
+            <div class="product-image"><img src="producto-2.jpg" alt="Venda Deportiva"></div>
+            <div class="product-info">
+                <h3>Venda Deportiva</h3>
+                <p>Venda deportiva azul para tobillo con soporte elástico.</p>
+                <div class="price">20 Bs</div>
+                <button class="buy-btn" onclick="addToOrder('Venda Deportiva', '')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="productos">
+            <div class="product-image"><img src="producto-3.jpg" alt="Muñequera Deportiva"></div>
+            <div class="product-info">
+                <h3>Muñequera Deportiva</h3>
+                <p>Muñequera deportiva azul con soporte para la palma.</p>
+                <div class="price">25 Bs</div>
+                <button class="buy-btn" onclick="addToOrder('Muñequera Deportiva', '')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="productos">
+            <div class="product-image"><img src="producto-4.jpg" alt="Codera Ortopédica"></div>
+            <div class="product-info">
+                <h3>Codera Ortopédica</h3>
+                <p>Codera ortopédica de compresión flexible, color azul.</p>
+                <div class="price">25 Bs</div>
+                <button class="buy-btn" onclick="addToOrder('Codera Ortopédica', '')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="productos">
+            <div class="product-image"><img src="producto-5.jpg" alt="Rodillera Ortopédica"></div>
+            <div class="product-info">
+                <h3>Rodillera Ortopédica</h3>
+                <p>Rodillera ortopédica de compresión larga, color negro.</p>
+                <div class="price">70 Bs</div>
+                <button class="buy-btn" onclick="addToOrder('Rodillera Ortopédica', '')">Agregar al pedido</button>
+            </div>
+        </div>
+        <div class="product" data-cat="productos">
+            <div class="product-image"><img src="producto-6.jpg" alt="Mangas Acolchadas para Vóley"></div>
+            <div class="product-info">
+                <h3>Mangas Acolchadas para Vóley</h3>
+                <p>Mangas acolchadas negras para voleibol con protección.</p>
+                <div class="price">90 Bs</div>
+                <button class="buy-btn" onclick="addToOrder('Mangas Acolchadas para Vóley', '')">Agregar al pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>Confirmar Compra</h2>
+        <div class="order-summary" id="orderSummary">
+            <strong>Tu pedido:</strong><br>
+            <span id="orderItems">Aún no has agregado productos.</span>
+        </div>
+        <form action="https://formspree.io/f/xgaaybgy" method="POST">
+            <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+            <input type="tel" name="celular" placeholder="Número de celular" required>
+            <textarea name="pedido" id="pedidoHidden" style="display:none;"></textarea>
+            <button type="submit" class="buy-btn">Confirmar Compra</button>
+        </form>
+        <p class="note">Los datos llegarán directamente a tu correo. Después de confirmar, te contactaremos.</p>
+    </div>
+
+    <footer>
+        <p>SPORTVIACHA © 2026 - Viacha, Bolivia</p>
+        <p>Colores inspirados en Miles Morales, el Merodeador y la bandera de Viacha</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
